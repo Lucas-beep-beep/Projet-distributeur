@@ -1,11 +1,9 @@
-import mongoose, { Schema, model, models } from "mongoose";
+import mongoose, { Schema, models, model } from "mongoose";
 
-const stockSchema = new Schema({
-  total: {
-    type: Number,
-    required: true,
-    default: 0,
-  },
+const StockSchema = new Schema({
+  total: { type: Number, required: true, default: 0 },
 });
 
-export default models.Stock || model("Stock", stockSchema);
+const Stock = models.Stock || model("Stock", StockSchema);
+
+export default Stock;
