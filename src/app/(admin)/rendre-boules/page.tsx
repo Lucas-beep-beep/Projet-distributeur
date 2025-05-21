@@ -23,9 +23,14 @@ export default function Rendre() {
       }
 
       alert(data.message); // => "Jeux rendus avec succès"
-    } catch (error: any) {
-      alert(error.message);
-    }
+    } 
+    
+  catch (error: unknown) {
+  if (error instanceof Error) {
+    console.error(error.message);
+  }
+}
+
   };
 
   return (

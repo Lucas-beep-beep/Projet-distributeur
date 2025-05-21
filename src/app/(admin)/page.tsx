@@ -23,10 +23,13 @@ export default function Louer() {
     }
 
     alert(data.message); // ✅ Affiche "Jeux loués avec succès"
-  } catch (error: any) {
-    console.error("Erreur dans handleSubmit:", error);
-    alert(error.message || "Erreur inconnue");
+  } 
+  catch (error: unknown) {
+  if (error instanceof Error) {
+    console.error(error.message);
   }
+}
+
   };
 
   return (
