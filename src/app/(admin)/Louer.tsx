@@ -40,6 +40,7 @@ export default function Louer() {
           <input
             type="number"
             min="1"
+            max="6"
             value={nombre}
             onChange={(e) => setNombre(Number(e.target.value))}
             className="block mt-1 p-2 border rounded w-24 mb-2"
